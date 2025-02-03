@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>w202425cs4092d: Introduction to Python</title>
+    <link rel="shortcut icon" href="https://eduserver.nitc.ac.in/theme/image.php/fordson/theme/1693930317/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, w202425cs4092d: Introduction to Python" />
+<link rel="stylesheet" type="text/css" href="https://eduserver.nitc.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://eduserver.nitc.ac.in/theme/styles.php/fordson/1693930317_1/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/eduserver.nitc.ac.in","sesskey":"ZeERU50BTv","sessiontimeout":"28800","themerev":"1693930317","slasharguments":1,"theme":"fordson","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1683622782","admin":"admin","svgicons":true,"usertimezone":"Asia\/Kolkata","contextid":312035,"langrev":1693308971,"templaterev":"1683622782"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/eduserver.nitc.ac.in\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/eduserver.nitc.ac.in\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/eduserver.nitc.ac.in\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/eduserver.nitc.ac.in\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/eduserver.nitc.ac.in\/theme\/yui_combo.php?m\/1683622782\/","combine":true,"comboBase":"https:\/\/eduserver.nitc.ac.in\/theme\/yui_combo.php?","ext":false,"root":"m\/1683622782\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-assignfeedback_editpdfplus-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/eduserver.nitc.ac.in\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/eduserver.nitc.ac.in\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1683622782\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/eduserver.nitc.ac.in\/lib\/javascript.php\/1683622782\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/eduserver.nitc.ac.in\/lib\/javascript.php\/1683622782\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="google-site-verification" content="0kvHDz7vAHPDlRC9rZv2ZXkqFITMxmmqjfG3TxWdVAE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-resource-view" class="format-weeks  path-mod path-mod-resource chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam eduserver-nitc-ac-in pagelayout-incourse course-7899 context-312035 cmid-152375 category-9 ">
+
+<div id="page-wrapper">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/polyfills/polyfill.js"></script>
+<script src="https://eduserver.nitc.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://eduserver.nitc.ac.in/theme/jquery.php/core/jquery-3.4.1.min.js"></script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="fixed-top navbar navbar-fhs   navbar-expand moodle-has-zindex">
+            <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="icon fa fa-bars fa-fw " aria-hidden="true"  ></i><span class="sr-only">Side panel</span></button>
+            </div>
+            <a href="https://eduserver.nitc.ac.in" class="navbar-brand has-logo
+                    ">
+                    <span class="logo d-none d-sm-inline">
+                        <img src="https://eduserver.nitc.ac.in/pluginfile.php/1/core_admin/logocompact/300x300/1693930317/Emblem.jpg" alt="Eduserver">
+                    </span>
+                <span class="site-name d-none d-md-inline">Eduserver</span>
+            </a>
+            
+            <!-- course_controls -->
+            <div class="coursecontrols nav-item d-flex">
+                <div class="studentdash nav-item nav-link">
+        <a role="button" data-tooltip="tooltip" data-placement= "bottom" title="Course Dashboard" data-toggle="modal" href="#studentdashslider" class="btn btn-secondary fhs-tooltip"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+    </div>
+                
+            </div>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-679f698ab417e679f698aaf09f2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" title="My Courses" aria-controls="drop-down-menu-679f698ab417e679f698aaf09f2">
+        My Courses
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-679f698ab417e679f698aaf09f2" aria-labelledby="drop-down-679f698ab417e679f698aaf09f2">
+                <a class="dropdown-item" role="menuitem" href="https://eduserver.nitc.ac.in/my" title="Dashboard">Dashboard</a>
+                <a class="dropdown-item" role="menuitem" href="https://eduserver.nitc.ac.in/course/view.php?id=7899" title="w202425cs4092d">CS4092D Machine Learning Lab</a>
+                <a class="dropdown-item" role="menuitem" href="https://eduserver.nitc.ac.in/course/view.php?id=7865" title="w202425cs3006d">CS3006D  Computer  Networks</a>
+                <a class="dropdown-item" role="menuitem" href="https://eduserver.nitc.ac.in/course/view.php?id=7866" title="w202425cs3005d">CS3005D Compiler Design</a>
+                <a class="dropdown-item" role="menuitem" href="https://eduserver.nitc.ac.in/course/view.php?id=7867" title="w202425cs3004d">CS3004D Software Engineering</a>
+                <a class="dropdown-item" role="menuitem" href="https://eduserver.nitc.ac.in/course/view.php?id=7868" title="w202425cs4044d">CS4044D Machine Learning(BTech)</a>
+    </div>
+</li>
+                
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="d-none d-lg-block">
+                
+            </div>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                <div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="16752"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-679f698ab549e679f698aaf09f3"
+        aria-haspopup="true"
+        aria-label="Show notification window with no new notifications"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="There are 0 unread notifications">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-679f698ab549e679f698aaf09f3"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Mark all as read"
+           data-action="mark-all-read"
+           role="button"
+           aria-label="Mark all as read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"  ></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </a>
+        <a href="https://eduserver.nitc.ac.in/message/notificationpreferences.php?userid=16752"
+           title="Notification preferences"
+           aria-label="Notification preferences">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://eduserver.nitc.ac.in/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-1-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-1" aria-label="User menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-1-menu">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">KRISHNA HARSHA MAMILLAPALLI</span><span class="avatars"><span class="avatar current"><img src="https://eduserver.nitc.ac.in/pluginfile.php/214901/user/icon/fordson/f2?rev=46136299" class="userpicture" width="35" height="35" aria-hidden="true" /></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+                                        <a href="https://eduserver.nitc.ac.in/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Dashboard
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://eduserver.nitc.ac.in/user/profile.php?id=16752" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Profile
+                                            </span>
+                                        </a>
+                                        <a href="https://eduserver.nitc.ac.in/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Grades
+                                            </span>
+                                        </a>
+                                        <a href="https://eduserver.nitc.ac.in/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Messages
+                                            </span>
+                                        </a>
+                                        <a href="https://eduserver.nitc.ac.in/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Preferences
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://eduserver.nitc.ac.in/login/logout.php?sesskey=ZeERU50BTv" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Log out
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    
+
+        <div class="headerbkg"><div class="customimage" style="background-image: url(&quot;//eduserver.nitc.ac.in/pluginfile.php/1/theme_fordson/headerdefaultimage/1693930317/Top%20Light%20%231f9fa2%20%281%29%20%281%29.png&quot;); background-size: cover; background-position:center;
+                width: 100%; height: 100%;"></div></div>
+
+    <div id="page" class="container-fluid">
+        
+        <div id="learningcontent">
+        
+            <div class="modal fade" id="studentdashslider" tabindex="-1" role="dialog" aria-labelledby="teacherdashslider" aria-hidden="true">
+<div class="modal-dialog" role="document">
+
+    <div class="modal-content">
+    <div class="modal-body">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        <div class="studentdashboard">
+        <div class="container-fluid">
+            <div class="editcogbutton"><div class="pull-xs-right context-header-settings-menu"></div></div>
+            <div class="row">
+
+                    <div class="col-md-2 studentgradebook">
+                        <p>My Grades</p><a href="https://eduserver.nitc.ac.in/grade/report/user/index.php?id=7899" alt="My Grades"><i class="fa fa-5x fa-bar-chart"></i></a>
+                    </div>
+
+                     
+                    <div class="col-md-2 studentadministration">
+                        <p>Course administration</p><a href="https://eduserver.nitc.ac.in/course/admin.php?courseid=7899" alt="Course administration"><i class="fa fa-5x fa-cog"></i></a>
+                    </div>
+                     
+                </div>
+
+            <div class="row">
+                    <div class="col-md-4 coursesummary">
+                        <div class="dashtitle">
+                            <h3><i class="fa fa-map">&nbsp</i>Course Description</h3>
+                        </div>
+                            <div class="card-block">
+                                    
+                            </div>
+                    </div>
+
+                    <div class="col-md-5 coursestafflisting">
+                        <div class="dashtitle">
+                            <h3><i class="fa fa-users">&nbsp</i>Course Teachers</h3>
+                        </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="staffmember">
+                                        <a href="https://eduserver.nitc.ac.in/user/view.php?id=103&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/769/user/icon/fordson/f1?rev=5236" class="userpicture" width="50" height="50" alt="Picture of Pournami P N" title="Picture of Pournami P N" /></a>
+                                        <div class="staffinfo">
+                                            <h4>Pournami P N 0900 </h4>
+                                            <p><a href="mailto:pournamipn@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="staffmember">
+                                        <a href="https://eduserver.nitc.ac.in/user/view.php?id=102&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of Jayaraj P B" title="Picture of Jayaraj P B" /></a>
+                                        <div class="staffinfo">
+                                            <h4>Jayaraj P B 0916 </h4>
+                                            <p><a href="mailto:jayarajpb@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="staffmember">
+                                        <a href="https://eduserver.nitc.ac.in/user/view.php?id=27610&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/276214/user/icon/fordson/f1?rev=48443011" class="userpicture" width="50" height="50" alt="Picture of Vidhya Kamakshi" title="Picture of Vidhya Kamakshi" /></a>
+                                        <div class="staffinfo">
+                                            <h4>Vidhya Kamakshi 1459 </h4>
+                                            <p><a href="mailto:vidhyakamakshi@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="staffmember">
+                                        <a href="https://eduserver.nitc.ac.in/user/view.php?id=27615&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of Umamaheswara Sharma Bhutamapuram" title="Picture of Umamaheswara Sharma Bhutamapuram" /></a>
+                                        <div class="staffinfo">
+                                            <h4>Umamaheswara Sharma Bhutamapuram 1460 </h4>
+                                            <p><a href="mailto:busharma@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group">
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=25339&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/248259/user/icon/fordson/f1?rev=48163607" class="userpicture" width="50" height="50" alt="Picture of Pratik Parmar" title="Picture of Pratik Parmar" /></a>
+                                <div class="staffinfo">
+                                    <h4>Pratik Parmar M230819CS</h4>
+                                    <p><a href="mailto:pratik_m230819cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=25346&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of Tarun Gupta" title="Picture of Tarun Gupta" /></a>
+                                <div class="staffinfo">
+                                    <h4>Tarun Gupta M231009CS</h4>
+                                    <p><a href="mailto:tarun_m231009cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=26966&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of Akshaykrishnan V" title="Picture of Akshaykrishnan V" /></a>
+                                <div class="staffinfo">
+                                    <h4>Akshaykrishnan V M231083CS</h4>
+                                    <p><a href="mailto:akshaykrishnan_m231083cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=29842&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/290097/user/icon/fordson/f1?rev=49992902" class="userpicture" width="50" height="50" alt="Picture of TILOK DOLEY" title="Picture of TILOK DOLEY" /></a>
+                                <div class="staffinfo">
+                                    <h4>TILOK DOLEY M240894CS</h4>
+                                    <p><a href="mailto:tilok_m240894cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=29901&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of ABHINAV KUMAR" title="Picture of ABHINAV KUMAR" /></a>
+                                <div class="staffinfo">
+                                    <h4>ABHINAV KUMAR M240965CS</h4>
+                                    <p><a href="mailto:abhinav_m240965cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=29926&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/290181/user/icon/fordson/f1?rev=50106033" class="userpicture" width="50" height="50" alt="Picture of AYUSH ASHOK MODI" title="Picture of AYUSH ASHOK MODI" /></a>
+                                <div class="staffinfo">
+                                    <h4>AYUSH ASHOK MODI M240995CS</h4>
+                                    <p><a href="mailto:ayush_m240995cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=29987&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/290242/user/icon/fordson/f1?rev=49992156" class="userpicture" width="50" height="50" alt="Picture of KOTA HEMAKANTH" title="Picture of KOTA HEMAKANTH" /></a>
+                                <div class="staffinfo">
+                                    <h4>KOTA HEMAKANTH M241064CS</h4>
+                                    <p><a href="mailto:kota_m241064cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=30043&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of RITIK KUMAR SAHU" title="Picture of RITIK KUMAR SAHU" /></a>
+                                <div class="staffinfo">
+                                    <h4>RITIK KUMAR SAHU M241125CS</h4>
+                                    <p><a href="mailto:ritik_m241125cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=30056&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of SATYAM KANNAUJIYA" title="Picture of SATYAM KANNAUJIYA" /></a>
+                                <div class="staffinfo">
+                                    <h4>SATYAM KANNAUJIYA M241140CS</h4>
+                                    <p><a href="mailto:satyam_m241140cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=8859&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of JASITHA P" title="Picture of JASITHA P" /></a>
+                                <div class="staffinfo">
+                                    <h4>JASITHA P P210050CS</h4>
+                                    <p><a href="mailto:jasitha_p210050cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=8908&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of ARATHY MENON N P" title="Picture of ARATHY MENON N P" /></a>
+                                <div class="staffinfo">
+                                    <h4>ARATHY MENON N P P210102CS</h4>
+                                    <p><a href="mailto:arathy_p210102cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=13764&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/pluginfile.php/203109/user/icon/fordson/f1?rev=44344738" class="userpicture" width="50" height="50" alt="Picture of NOORJAHAN.C" title="Picture of NOORJAHAN.C" /></a>
+                                <div class="staffinfo">
+                                    <h4>NOORJAHAN.C P220072CS</h4>
+                                    <p><a href="mailto:noorjahan_p220072cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=29344&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of HUSAIN AHAMED PARASSEERI" title="Picture of HUSAIN AHAMED PARASSEERI" /></a>
+                                <div class="staffinfo">
+                                    <h4>HUSAIN AHAMED PARASSEERI P240236CS</h4>
+                                    <p><a href="mailto:husain_p240236cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="list-group-item">
+                            <div class="staffmember">
+                                <a href="https://eduserver.nitc.ac.in/user/view.php?id=29353&amp;course=7899" class="d-inline-block aabtn"><img src="https://eduserver.nitc.ac.in/theme/image.php/fordson/core/1693930317/u/f1" class="userpicture defaultuserpic" width="50" height="50" alt="Picture of POORNIMA SANKAR" title="Picture of POORNIMA SANKAR" /></a>
+                                <div class="staffinfo">
+                                    <h4>POORNIMA SANKAR P240241CS</h4>
+                                    <p><a href="mailto:poornima_p240241cs@nitc.ac.in"><i class="fa fa-envelope-o">&nbsp</i>Email address</a> <br /> </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 activitylinks">
+                        <div class="dashtitle">
+                            <h3><i class="fa fa-check-square-o dashicon"></i>Activities</h3>     
+                        </div>
+                        <div class="list-group">
+                            <div class="list-group" aria-labelledby="list-group-679f698abb062679f698aaf09f12">
+        <a href="https://eduserver.nitc.ac.in/mod/forum/index.php?id=7899"class="list-group-item" >Forums</a>
+        <a href="https://eduserver.nitc.ac.in/course/resources.php?id=7899"class="list-group-item" >Resources</a>
+ </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 studentprogress">
+                    My Progress 
+                    <div class="progress border w-100">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" style= "width: 0%" aria-valuemin="0" aria-valuemax="100"> 
+    	<div class="small">
+		    <span class="sr-only">Course progress:</span>
+		    <strong>0% Complete </strong>
+		</div>
+    </div>
+</div>
+                </div>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+</div>
+</div>
+
+<div style="clear:both;"></div>
+            <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card ">
+            <div class="card-body ">
+                <div class="d-flex">
+                    <div class="mr-auto">
+                        <a href="https://eduserver.nitc.ac.in/course/view.php?id=7899"><div class="page-context-header"><div class="page-header-headings"><h1>CS4092D Machine Learning Lab</h1></div></div></a>
+                    </div>
+
+                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav role="navigation" aria-label="Navigation bar">
+    <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://eduserver.nitc.ac.in/"  >Home</a>
+                </li>
+                <li class="breadcrumb-item">My courses</li>
+                <li class="breadcrumb-item">
+                    <a href="https://eduserver.nitc.ac.in/course/view.php?id=7899"  title="CS4092D Machine Learning Lab">w202425cs4092d</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-2"  >21 December - 27 December</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="https://eduserver.nitc.ac.in/mod/resource/view.php?id=152375" aria-current="page" title="File">Introduction to Python</a>
+                </li>
+    </ul>
+</nav>
+                    </div>
+
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+            
+            <div id="page-content" class="row pb-3">
+                <div id="region-main-box" class="col-12">
+                    <section id="region-main" >
+
+                                
+                                <span class="notifications" id="user-notifications"></span>
+                                <div role="main"><span id="maincontent"></span><h2>Introduction to Python</h2><div id="resourceintro" class="box py-3 mod_introbox"><p class="resourcedetails">800.5KB</p></div><div class="resourceworkaround">Click <a href="https://eduserver.nitc.ac.in/pluginfile.php/312035/mod_resource/content/1/Introduction_to_Python.ipynb" onclick="window.open('https://eduserver.nitc.ac.in/pluginfile.php/312035/mod_resource/content/1/Introduction_to_Python.ipynb', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false;">Introduction_to_Python.ipynb</a> link to view the file.</div></div>
+                                
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+        <div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+            <nav class="list-group" aria-label="w202425cs4092d">
+                <ul>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" >
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">w202425cs4092d</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/user/index.php?id=7899" data-key="participants" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="90" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-users fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Participants</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/badges/view.php?type=2&amp;id=7899" data-key="badgesview" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-shield fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Badges</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/admin/tool/lp/coursecompetencies.php?courseid=7899" data-key="competencies" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-check-square-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Competencies</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/grade/report/index.php?id=7899" data-key="grades" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Grades</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-0" data-key="168558" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">General</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-1" data-key="168559" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">14 December - 20 December</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action active " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-2" data-key="168560" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body font-weight-bold">21 December - 27 December</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-3" data-key="168561" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">28 December - 3 January</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-4" data-key="168562" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">4 January - 10 January</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-5" data-key="168563" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">11 January - 17 January</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-6" data-key="168564" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">18 January - 24 January</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-7" data-key="168565" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">25 January - 31 January</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-8" data-key="168566" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">1 February - 7 February</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-9" data-key="168567" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">8 February - 14 February</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-10" data-key="168568" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">15 February - 21 February</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-11" data-key="168569" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">22 February - 28 February</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-12" data-key="168570" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">1 March - 7 March</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-13" data-key="168571" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">8 March - 14 March</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-14" data-key="168572" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">15 March - 21 March</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-15" data-key="168573" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">22 March - 28 March</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-16" data-key="168574" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">29 March - 4 April</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-17" data-key="168575" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">5 April - 11 April</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-18" data-key="168576" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">12 April - 18 April</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-19" data-key="168577" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">19 April - 25 April</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899#section-20" data-key="168578" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="7899">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">26 April - 2 May</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        </ul>
+                        </nav>
+                        <nav class="list-group mt-1" aria-label="Site">
+                        <ul>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="1" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" >
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-home fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Home</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/my/" data-key="myhome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="home">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Dashboard</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/calendar/view.php?view=month&amp;course=7899" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-calendar fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">Calendar</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="list-group-item " data-key="mycourses" data-isexpandable="1" data-indent="0" data-showdivider="0" data-type="0" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="home">
+                                <div class="ml-0">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body">My courses</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7899" data-key="7899" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                                <div class="ml-1">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">w202425cs4092d</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7868" data-key="7868" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                                <div class="ml-1">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">w202425cs4044d</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7867" data-key="7867" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                                <div class="ml-1">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">w202425cs3004d</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7866" data-key="7866" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                                <div class="ml-1">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">w202425cs3005d</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item list-group-item-action  " href="https://eduserver.nitc.ac.in/course/view.php?id=7865" data-key="7865" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                                <div class="ml-1">
+                                    <div class="media">
+                                            <span class="media-left">
+                                                <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  ></i>
+                                            </span>
+                                        <span class="media-body ">w202425cs3006d</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="mt-5 mb-1 activity-navigation container-fluid">
+<div class="row">
+    <div class="col-md-4">        <div class="float-left">
+                <a href="https://eduserver.nitc.ac.in/mod/forum/view.php?id=151153&forceview=1" id="prev-activity-link" class="btn btn-link"  title="Announcements" >&#x25C4; Announcements</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://eduserver.nitc.ac.in/course/jumpto.php" class="form-inline" id="url_select_f679f698aaf09f13">
+        <input type="hidden" name="sesskey" value="ZeERU50BTv">
+            <label for="jump-to-activity" class="sr-only">
+                Jump to...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Jump to...</option>
+                    <option value="/mod/forum/view.php?id=151153&amp;forceview=1" >Announcements</option>
+                    <option value="/mod/resource/view.php?id=152504&amp;forceview=1" >ML Lab Practise Set I</option>
+                    <option value="/mod/resource/view.php?id=152514&amp;forceview=1" >Python Practicse Lab Set II</option>
+                    <option value="/mod/resource/view.php?id=152793&amp;forceview=1" >Practise Problem  - KNN</option>
+                    <option value="/mod/resource/view.php?id=152811&amp;forceview=1" >KNN -Dataset</option>
+                    <option value="/mod/resource/view.php?id=153042&amp;forceview=1" >ML Lab Assignment 1 - Linear Regression</option>
+                    <option value="/mod/resource/view.php?id=153075&amp;forceview=1" >DATASET for LR</option>
+                    <option value="/mod/resource/view.php?id=153076&amp;forceview=1" >Lab Plan - ML LAB</option>
+                    <option value="/mod/resource/view.php?id=153293&amp;forceview=1" >Assignment II </option>
+                    <option value="/mod/resource/view.php?id=153512&amp;forceview=1" >Tentative course plan</option>
+                    <option value="/mod/resource/view.php?id=153871&amp;forceview=1" >Random Forest - Jan 28</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Go">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="float-right">
+                <a href="https://eduserver.nitc.ac.in/mod/resource/view.php?id=152504&forceview=1" id="next-activity-link" class="btn btn-link"  title="ML Lab Practise Set I" >ML Lab Practise Set I &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div>
+
+    
+    <footer id="page-footer" class="py-3 text-dark">
+        <div class="container">
+    
+            <div id="course-footer"></div>
+    
+            <div class="row">
+    
+                    <div class="col-md-8">
+                        
+    
+                        <div class="logininfo">You are logged in as <a href="https://eduserver.nitc.ac.in/user/profile.php?id=16752" title="View profile">KRISHNA HARSHA MAMILLAPALLI</a> (<a href="https://eduserver.nitc.ac.in/login/logout.php?sesskey=ZeERU50BTv">Log out</a>)</div>
+    
+                        <div class="homelink"><a href="https://eduserver.nitc.ac.in/course/view.php?id=7899">w202425cs4092d</a></div>
+    
+    
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="brandbox">
+    
+                            <h3>National Institute of Technology Calicut</h3>
+                                <ul class="footercontact">
+                                    <li><i class="fa fa-globe"></i>  www.nitc.ac.in</li>
+                                    
+                                    <li><i class="fa fa-mobile-phone"></i>  +91-495-2286106</li>
+                                </ul>
+    
+                            <div class="socials_wrapper">
+        <ul class="socials">
+                    <a href = https://twitter.com/nitcofficial class = "socialicon blog" title = "https://twitter.com/nitcofficial" alt="https://twitter.com/nitcofficial" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://twitter.com/nitcofficial</span>
+                    </a>
+                    <a href = https://www.youtube.com/channel/UCC_queWh7Zj1p6NUPlZPHBA class = "socialicon blog" title = "https://www.youtube.com/channel/UCC_queWh7Zj1p6NUPlZPHBA" alt="https://www.youtube.com/channel/UCC_queWh7Zj1p6NUPlZPHBA" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://www.youtube.com/channel/UCC_queWh7Zj1p6NUPlZPHBA</span>
+                    </a>
+                    <a href = https://www.instagram.com/nitcofficial class = "socialicon blog" title = "https://www.instagram.com/nitcofficial" alt="https://www.instagram.com/nitcofficial" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">https://www.instagram.com/nitcofficial</span>
+                    </a>
+                    <a href = www.nitc.ac.in class = "socialicon blog" title = "www.nitc.ac.in" alt="www.nitc.ac.in" target="_blank">
+                    <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-globe fa-inverse fa-stack-1x"></i>
+                    </span>
+                    <span class="sr-only">www.nitc.ac.in</span>
+                    </a>
+        </ul>
+    </div>
+    
+                        </div>
+                    </div>
+    
+            </div>
+            <nav class="nav navbar-nav d-md-none">
+                    <ul class="list-unstyled pt-3">
+                    </ul>
+            </nav>
+            <div class="policiesfooter"><a href="https://eduserver.nitc.ac.in/admin/tool/policy/viewall.php?returnurl=https%3A%2F%2Feduserver.nitc.ac.in%2Fmod%2Fresource%2Fview.php%3Fid%3D152375">Policies</a></div>
+            <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://eduserver.nitc.ac.in/lib/requirejs.php/1683622782/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/jquery/jquery-3.4.1.min',
+        jqueryui: 'https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://eduserver.nitc.ac.in/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage('en', {
+  "Audio Player": "Audio Player",
+  "Video Player": "Video Player",
+  "Play": "Play",
+  "Pause": "Pause",
+  "Replay": "Replay",
+  "Current Time": "Current Time",
+  "Duration": "Duration",
+  "Remaining Time": "Remaining Time",
+  "Stream Type": "Stream Type",
+  "LIVE": "LIVE",
+  "Seek to live, currently behind live": "Seek to live, currently behind live",
+  "Seek to live, currently playing live": "Seek to live, currently playing live",
+  "Loaded": "Loaded",
+  "Progress": "Progress",
+  "Progress Bar": "Progress Bar",
+  "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+  "Fullscreen": "Fullscreen",
+  "Non-Fullscreen": "Non-Fullscreen",
+  "Mute": "Mute",
+  "Unmute": "Unmute",
+  "Playback Rate": "Playback Rate",
+  "Subtitles": "Subtitles",
+  "subtitles off": "subtitles off",
+  "Captions": "Captions",
+  "captions off": "captions off",
+  "Chapters": "Chapters",
+  "Descriptions": "Descriptions",
+  "descriptions off": "descriptions off",
+  "Audio Track": "Audio Track",
+  "Volume Level": "Volume Level",
+  "You aborted the media playback": "You aborted the media playback",
+  "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+  "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+  "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+  "No compatible source was found for this media.": "No compatible source was found for this media.",
+  "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+  "Play Video": "Play Video",
+  "Close": "Close",
+  "Close Modal Dialog": "Close Modal Dialog",
+  "Modal Window": "Modal Window",
+  "This is a modal window": "This is a modal window",
+  "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+  ", opens captions settings dialog": ", opens captions settings dialog",
+  ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+  ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+  ", selected": ", selected",
+  "captions settings": "captions settings",
+  "subtitles settings": "subtitles settings",
+  "descriptions settings": "descriptions settings",
+  "Text": "Text",
+  "White": "White",
+  "Black": "Black",
+  "Red": "Red",
+  "Green": "Green",
+  "Blue": "Blue",
+  "Yellow": "Yellow",
+  "Magenta": "Magenta",
+  "Cyan": "Cyan",
+  "Background": "Background",
+  "Window": "Window",
+  "Transparent": "Transparent",
+  "Semi-Transparent": "Semi-Transparent",
+  "Opaque": "Opaque",
+  "Font Size": "Font Size",
+  "Text Edge Style": "Text Edge Style",
+  "None": "None",
+  "Raised": "Raised",
+  "Depressed": "Depressed",
+  "Uniform": "Uniform",
+  "Dropshadow": "Dropshadow",
+  "Font Family": "Font Family",
+  "Proportional Sans-Serif": "Proportional Sans-Serif",
+  "Monospace Sans-Serif": "Monospace Sans-Serif",
+  "Proportional Serif": "Proportional Serif",
+  "Monospace Serif": "Monospace Serif",
+  "Casual": "Casual",
+  "Script": "Script",
+  "Small Caps": "Small Caps",
+  "Reset": "Reset",
+  "restore all settings to the default values": "restore all settings to the default values",
+  "Done": "Done",
+  "Caption Settings Dialog": "Caption Settings Dialog",
+  "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+  "End of dialog window.": "End of dialog window.",
+  "{1} is loading.": "{1} is loading.",
+  "Exit Picture-in-Picture": "Exit Picture-in-Picture",
+  "Picture-in-Picture": "Picture-in-Picture"
+});
+
+    });
+});;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('https://eduserver.nitc.ac.in/mod/resource/view.php?id=152375&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f679f698aaf09f13').submit();
+            });
+        });
+    ;
+
+require(['theme_boost/loader']);
+require(['jquery','theme_boost/tooltip'], function($){$('[data-tooltip="tooltip"]').tooltip()});
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(312035, [], true); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/theme/fordson/javascript/scrolltotop.js"></script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/theme/fordson/javascript/scrollspy.js"></script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/theme/fordson/javascript/blockslider.js"></script>
+<script src="https://eduserver.nitc.ac.in/lib/javascript.php/1683622782/theme/fordson/javascript/courseblock.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random679f698aaf09f14'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random679f698aaf09f14'); });
+})();
+//]]>
+</script>
+
+    
+        </div>
+    
+    </footer>
+
+</div>
+
+<a href="#" id="back-to-top" class="btn btn-primary btn-lg" role="button" title="Back to Top and Scrollspy"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+
+</body>
+</html>
